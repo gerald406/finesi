@@ -10,9 +10,13 @@
 </head>
 
 <body>
+    @php
+        $db = 'success';
+    @endphp
     <div class="container mx-auto py-12">
-        <x-alerta>
-            Curidado sin desmayar, me quedo aquí
+        <x-alerta type="{{ $db }}">
+            <x-slot name="titulo">Títuto de Prueba</x-slot>
+            Uso de componentes en laravel 12
         </x-alerta>
     </div>|
 
